@@ -6,10 +6,45 @@ a {
   color: #00B7FF;
 }
 
-
 .banner{
 	background-image: url('../assets/img/wallpaper.jpg');
 	background-repeat: repeat-x;
 	color: #fff;
-	min-height: 100px;
+	min-height: 150px;
+}
+
+.deloitte-digital-logo{
+	height: 30px;
+}
+
+.navbar{
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+main{
+	padding-top: 50px;
+}
+
+.postcard-image{
+	width: 100%;
+	display: block;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
 }
