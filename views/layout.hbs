@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <title>Deloitte Digital</title>
+    <meta content="Deloitte Digital" name="author">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1.0" name="viewport">
+    <link href="/assets/img/site-icons/favicon.ico" rel="shortcut icon">
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
 	<!-- Latest compiled and minified CSS -->
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
@@ -15,6 +19,133 @@
   <link class="user" href="/BuildMySite_Assets/assets/css/style.min.css" rel="stylesheet" type="text/css">
   <link class="user" href="/BuildMySite_Assets/assets/css/googlefonts.css" rel="stylesheet" type="text/css">
     <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+
+  <script>
+
+              $( document ).ready(function() {
+                  $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                      var target = $(this.hash);
+                     
+                      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                      if (target.length) {
+                        $('html, body').animate({scrollTop: target.offset().top - 80}, 1000);
+                        return false;
+                      }
+                    }
+                  });
+
+
+              });
+
+              $(window).load(function() {
+                  // Animate loader off screen
+                  $(".se-pre-con").fadeOut("slow");;
+              });
+
+          </script>
+
+        
+          <style>
+              .block-content .block img{
+                  height: auto !important;
+                  width: 60% !important;
+                  margin: auto;
+                  display: block !important;
+              }
+
+              .bg-white img{
+                  height: auto !important;
+                  width: 60% !important;
+                  margin: auto;
+                  display: block !important;
+              }
+
+              .no-js #loader { display: none;  }
+              .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+              .se-pre-con {
+                  position: fixed;
+                  left: 0px;
+                  top: 0px;
+                  width: 100%;
+                  height: 100%;
+                  z-index: 9999;
+                  background: url('{!URLFOR($Resource.BuildMySite_Assets, 'assets/assets/img/Preloader_3.gif')}') center no-repeat #fff;
+              }
+                          
+              .header-navbar-dark #header-navbar {
+                  background-color: #{!IF($CurrentPage.parameters.HeaderColor == NULL,oColorSettings.Header_Color__c,$CurrentPage.parameters.HeaderColor)};
+                  -webkit-box-shadow: none;
+                  box-shadow: none
+              }
+              .nav-main-header ul {
+                  position: absolute;
+                  left: 0;
+                  margin: 0;
+                  padding: 13px 0;
+                  min-width: 160px;
+                  background-color: #{!IF($CurrentPage.parameters.HeaderColor == NULL,oColorSettings.Header_Color__c,$CurrentPage.parameters.HeaderColor)}
+              }
+              /*#main-container {
+                  background-color: {!oColorSettings.Background_Color__c}
+              }*/
+              .bg-primary-dark-op {
+                  background-color: #{!IF($CurrentPage.parameters.HeaderColor == NULL,oColorSettings.Header_Color__c,$CurrentPage.parameters.HeaderColor)}
+              }
+
+              table.htmlDetailElementTable>tbody>tr:nth-of-type(odd){
+                 background: inherit;
+              }
+
+              table.htmlDetailElementTable>tbody>tr>td{
+                 padding: 0;
+                 border: none;
+              }
+
+              table.htmlDetailElementTable a{
+                  color: #337ab7
+              }         
+              
+              table.htmlDetailElementTable .sfdc_richtext table{
+                  width: 100%;
+              }
+              
+              table.htmlDetailElementTable .sfdc_richtext table td{
+                  padding: 1em;
+              }
+              
+             div.bg-image {
+                 content:url(https://www.w3schools.com/cssref/img_tree.jpg);
+              }​
+              
+              
+              /*.nav-main-header {
+                  position: fixed;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 50%;
+                  margin: 0;
+                  padding: 20px;
+                  width: 50%;
+                  list-style: none;
+                  background-color: {!oColorSettings.Header_Color__c};
+                  z-index: 1031;
+                  opacity: 1;
+                  overflow-y: auto;
+                  -webkit-overflow-scrolling: touch;
+                  -webkit-transition: all .28s ease-out;
+                  transition: all .28s ease-out;
+                  -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden;
+                  -webkit-transform: translateX(0) translateY(-100%) translateZ(0);
+                  -ms-transform: translateX(0) translateY(-100%);
+                  transform: translateX(0) translateY(-100%) translateZ(0)
+              }
+  */
+          </style>
+
+
   </head>
   <body>
     {{{body}}}
