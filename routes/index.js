@@ -1,12 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var fs = require("fs");
-var contents = fs.readFileSync("content.json");
-var jsonContent = JSON.parse(contents);
+var contents = require("../content.json");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', jsonContent);
+  res.render('index', contents);
 });
 
 module.exports = router;
